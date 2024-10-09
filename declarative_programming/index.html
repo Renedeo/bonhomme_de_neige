@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="pannel-container">
+        <div class="left-pannel">
+            <div class="score">
+                <div class="nb_apples_reached">
+                    Score : <span class="badge badge-primary" id="score">0</span>
+                </div>
+                <p>Above are displayed the score, ... means the number of apple the snowman reachs</p>
+            </div>
+
+            <div id="remainingTime">
+                Timelapse : <div class="badge badge-third"><span id="time-control">00:15</span>s</div>
+            </div>
+        </div>
+        <!-- Right pannel for game start -->
+        <div class="right-pannel">
+            <div id="start-button">
+                <button type="button" class="btn btn-primary start-button">
+                    Start game
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="game-space">
+    </div>
+
+    <div class="container">
+        <div class="alert alert-warning" role="alert">
+            <strong>Warning!</strong> This game i not yet fully implemented.
+        </div>
+    </div>
+
+    <!-- event programming -->
+    <script type="module" src="../event_programming/gameControl.gamePhase.js"></script>
+</body>
+
+</html>

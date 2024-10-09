@@ -1,0 +1,9 @@
+services:
+  snowmans:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/usr/local/apache2/htdocs:ro  # Read-only mount for live reloading

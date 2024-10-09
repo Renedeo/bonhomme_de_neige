@@ -1,0 +1,57 @@
+html{
+    /* We have to fix html height */
+    min-height: 100%;
+    background: linear-gradient(to bottom right, lightblue, lightgreen);
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    /* gradient backgtound  */
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#game-space {
+    position: relative;
+    flex-grow: 1;
+    background-color: sandybrown;
+    padding: 10px;
+}
+
+.container {
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+/* Game control pannel */
+.score > p {
+    font-size: x-small;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all ease-in-out .5s;
+    position: absolute;
+}
+.score > div:hover ~ p {
+    background-color: antiquewhite;
+    height: fit-content;
+    overflow: auto;
+    width: 100%;
+    z-index: 10;
+}
+
+.pannel-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.left-pannel {
+    position: relative;
+}
