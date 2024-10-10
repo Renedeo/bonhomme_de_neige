@@ -1,7 +1,7 @@
-import { setAppleRandomPosition } from "../functionnal_programming/GetApplePosition.extension.js";
-import { moveSnowman } from "../functionnal_programming/Snowman.extension.js";
-import { updateScore } from "./gameControl.updateScore.js";
-import { gameStatus } from "./gameStatus.gameStatus.js";
+import { setAppleRandomPosition } from "../../functionnal_programming/Apple.extension.js";
+import { moveSnowman } from "../../functionnal_programming/Snowman.extension.js";
+import { updateScore } from "../Score.event/gameControl.updateScore.js";
+import { gameStatus } from "../Game.event/gameStatus.gameStatus.js";
 
 // Add event listener for keydown event
 

@@ -25,31 +25,36 @@
             </div>
 
             <div id="remainingTime">
-                Timelapse : <div class="badge badge-third"><span id="time-control">00:15</span>s</div>
+                Remaining Time : <div class="badge badge-third"><span id="time-control">00:15</span>s</div>
             </div>
         </div>
         <!-- Right pannel for game start -->
         <div class="right-pannel">
-            <div id="start-button">
-                <button type="button" class="btn btn-primary start-button">
-                    Start game
+                <button type="button" class="btn btn-primary" id="start-button">
+                    Start
                 </button>
-            </div>
+                <button type="button" class="btn btn-secondary" id="reset-button">
+                    Reset
+                </button>  
+                <button type="button" class="btn btn-secondary" id="stop-button">
+                    Stop
+                </button>  
         </div>
     </div>
-
 
     <div id="game-space">
     </div>
 
     <div class="container">
         <div class="alert alert-warning" role="alert">
-            <strong>Warning!</strong> This game i not yet fully implemented.
+            <strong>Warning!</strong> This game is not yet fully implemented.
         </div>
     </div>
 
     <!-- event programming -->
-    <script type="module" src="../event_programming/gameControl.gamePhase.js"></script>
+    <script type="module" src="../event_programming/Game.event/LauchGame.event/gameControl.gamePhase.js"></script>
+    <script type="module" src="../event_programming/Game.event/ResetGame.event/gameControl.gamePhase.js"></script>
+    <script type="module" src="../event_programming/Game.event/GameTime.event/gameControl.gamePhase.js"></script>
 </body>
 
 </html>

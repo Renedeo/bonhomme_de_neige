@@ -1,4 +1,4 @@
-import { gameStatus } from "../event_programming/gameStatus.gameStatus.js";
+import { gameStatus } from "../event_programming/Game.event/gameStatus.gameStatus.js";
 
 /**
  * This function checks if an element is within the game space boundaries.

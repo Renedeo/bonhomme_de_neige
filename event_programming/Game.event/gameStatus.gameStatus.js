@@ -2,39 +2,41 @@
 export let gameStatus = {
   isStarted: false,
   isPlaying: false,
+  isPaused: false,
   isGameOver: false,
   score: 0,
   highScore: 0,
 
   // Game timer properties
   timeConfig: {
-    timer: 25000, // 25 seconds
+    timer: 5000, // 25 seconds
     defaultTimer: 15000, // 15 seconds
     decrement: 1000, // 1 second
+    interval: null,
   },
 
   // Apple properties
   apple: {
     element: null,
-    imageURL: "../public/apple.png",
+    imageURL: "../public/Apple.image/apple-1.png",
     size: {
       width: 50,
       height: 50,
-    }, 
+    },
     Position: {
       x: null,
       y: null,
-    }
+    },
   },
 
   // Snowman properties
   Snowmans: {
     count: 5,
-    imageURL: "../public/bonhomme-de-neige (2).png",
-    element : document.getElementById("snowman"),
-    Position:{
-      x:  0,
-      y:  0,
+    imageURL: "../public/Snowman.image/bonhomme-de-neige-1.png",
+    element: document.getElementById("snowman"),
+    Position: {
+      x: 0,
+      y: 0,
     },
     size: {
       width: 50,
@@ -48,11 +50,20 @@ export let gameStatus = {
   // Game space dimensions
 
   gameSpace: {
-    element : document.getElementById("game-space"),
+    element: document.getElementById("game-space"),
     width: document.getElementById("game-space").offsetWidth,
     height: document.getElementById("game-space").offsetHeight,
   },
 
-  startButton: document.getElementById("start-button"),
-};
+  startButton: {
+    element: document.getElementById("start-button"),
+  },
 
+  resetButton: {
+    element: document.getElementById("reset-button"),
+  },
+
+  stopButton: {
+    element: document.getElementById("stop-button"),
+  }
+};

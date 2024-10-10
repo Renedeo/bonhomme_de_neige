@@ -1,5 +1,5 @@
-import { setAppleRandomPosition } from "../functionnal_programming/GetApplePosition.extension.js";
-import { gameStatus } from "./gameStatus.gameStatus.js";
+import { setAppleRandomPosition } from "../../functionnal_programming/Apple.extension.js";
+import { gameStatus } from "../Game.event/gameStatus.gameStatus.js";
 
 /**
  * Spawn an apple in a random position in the game space.
@@ -11,7 +11,7 @@ export function AppleSpawn() {
 
   // Create the apple image element and set its source
   let appleImage = document.createElement("img");
-  appleImage.src = "../public/logo-apple.png";
+  appleImage.src = gameStatus.apple.imageURL;
 
   // Add the apple image to the apple div
   apple.appendChild(appleImage);

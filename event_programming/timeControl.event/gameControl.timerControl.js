@@ -1,29 +1,17 @@
 import {
   reduceTime,
   getRemainingTime,
-} from "../functionnal_programming/RemainingTime.extension.js";
-import { removehandler } from "./gameControl.moveSnowman.js";
-import { gameStatus } from "./gameStatus.gameStatus.js";
+} from "../../functionnal_programming/RemainingTime.extension.js";
+import { gameStatus } from "../Game.event/gameStatus.gameStatus.js";
+import { endGame } from "../Game.event/LauchGame.event/gameControl.gamePhase.js";
 
-let interval;
-
-function timeControl() {
-  interval = setInterval(function () {
+function timeManager() {
+  gameStatus.timeConfig.interval = setInterval(function () {
     changeTimer();
 
     if (getRemainingTime() <= 0) {
-      clearInterval(interval);
-      alert("Time is up!");
-
-      // Remove apple from game space
-      let apple = document.getElementById("apple");
-      apple.parentNode.removeChild(apple);
-
-      // Reset timer
-      resetTimer();
-
-      // Disable keyboard event listener
-      removehandler();
+      clearInterval(gameStatus.timeConfig.interval);
+      endGame();
     }
   }, 1000);
 }
@@ -46,14 +34,16 @@ function changeTimer() {
  * Stop the timer and reset the game status
  */
 function restartTimer() {
-  clearInterval(interval);
   resetTimer();
 }
 
 /**
  * Reset the timer to its initial value and update the HTML element
- */
+*/
 function resetTimer() {
+  // Reset reset time
+  clearInterval(gameStatus.timeConfig.interval);
+
   let timerElement = document.getElementById("time-control");
   // Reset game status
   gameStatus.timeConfig.timer = gameStatus.timeConfig.defaultTimer; // 15000 milliseconds = 15 seconds
@@ -71,4 +61,4 @@ function timeFormater(minutes, seconds) {
     .padStart(2, "0")}`;
 }
 
-export { timeControl, restartTimer, changeTimer, resetTimer };
+export { timeManager, restartTimer, changeTimer, resetTimer };

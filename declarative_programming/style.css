@@ -54,4 +54,18 @@ body {
 }
 .left-pannel {
     position: relative;
+    flex-grow: 1;
+}
+
+.right-pannel {
+    display: flex;
+}
+
+#reset-button, 
+#stop-button {
+    flex-grow: 1;
+    margin-left: 2px;
+}
+#reset-button{
+    background-color: goldenrod;
 }

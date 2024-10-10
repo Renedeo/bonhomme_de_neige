@@ -1,4 +1,4 @@
-import { gameStatus } from "./gameStatus.gameStatus.js";
+import { gameStatus } from "../Game.event/gameStatus.gameStatus.js";
 
 export function snowmanSpawn() {
   // Create a new snowman element
